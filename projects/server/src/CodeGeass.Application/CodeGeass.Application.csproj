@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="Rebus" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeGeass.Infra\CodeGeass.Infra.csproj" />
+    <ProjectReference Include="..\CodeGeass.SharedKernel.IntegrationEvents\CodeGeass.SharedKernel.IntegrationsEvents.csproj" />
+    <ProjectReference Include="..\CodeGeass.SharedKernel.Result\CodeGeass.SharedKernel.Result.csproj" />
+  </ItemGroup>
+  
+</Project>

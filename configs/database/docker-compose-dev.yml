@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  postgres-server:
+    container_name: postgres-server
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    networks:
+      - app-tier
+  
+  postgres-adminer:
+    container_name: postgres-adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - app-tier
+      
+networks:
+  app-tier:
+    driver: bridge
