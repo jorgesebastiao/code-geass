@@ -35,9 +35,9 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Tests.Base
                      .UseApplicationServiceProvider(serviceProvider)
             .Options;
 
-            var codeGeassInvoiceBdContext = new CodeGeassKnightmareFrameBdContext(dbContextOptions, _mediatorFake.Object, __ntegrationEventMapperFake.Object);
-            codeGeassInvoiceBdContext.Database.EnsureCreated();
-            return codeGeassInvoiceBdContext;
+            var codeGeassKnightmareFrameBdContext = new CodeGeassKnightmareFrameBdContext(dbContextOptions, _mediatorFake.Object, __ntegrationEventMapperFake.Object);
+            codeGeassKnightmareFrameBdContext.Database.EnsureCreated();
+            return codeGeassKnightmareFrameBdContext;
         }
     }
 }
