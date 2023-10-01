@@ -6,9 +6,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CodeGeassInvoiceBdContext>
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<CodeGeassKnightmareFrameBdContext>
     {
-        public CodeGeassInvoiceBdContext CreateDbContext(string[] args)
+        public CodeGeassKnightmareFrameBdContext CreateDbContext(string[] args)
         {
             var configEnvironment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
@@ -18,13 +18,13 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
                 .AddJsonFile($"appsettings.{configEnvironment}.json", optional: true)
                 .Build();
 
-            var optionsBuilder = new DbContextOptionsBuilder<CodeGeassInvoiceBdContext>();
+            var optionsBuilder = new DbContextOptionsBuilder<CodeGeassKnightmareFrameBdContext>();
 
             var appSettings = config.LoadSettings<DataSettings>("DataSettings");
 
             optionsBuilder.UseOracle(appSettings.ConnectionString);
 
-            return new CodeGeassInvoiceBdContext(optionsBuilder.Options);
+            return new CodeGeassKnightmareFrameBdContext(optionsBuilder.Options);
         }
     }
 }

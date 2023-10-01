@@ -12,7 +12,7 @@ namespace CodeGeass.KnightmareFrames.Api.Jobs
     public class IntegrationEventPublisherJob : IJob
     {
         private readonly IBus _bus;
-        private readonly CodeGeassInvoiceBdContext _context;
+        private readonly CodeGeassKnightmareFrameBdContext _context;
         private readonly ILogger<IntegrationEventPublisherJob> _logger;
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace CodeGeass.KnightmareFrames.Api.Jobs
         /// <param name="bus"></param>
         /// <param name="context"></param>
         /// <param name="logger"></param>
-        public IntegrationEventPublisherJob(IBus bus, CodeGeassInvoiceBdContext context, ILogger<IntegrationEventPublisherJob> logger)
+        public IntegrationEventPublisherJob(IBus bus, CodeGeassKnightmareFrameBdContext context, ILogger<IntegrationEventPublisherJob> logger)
         {
             _bus = bus;
             _context = context;

@@ -5,9 +5,9 @@ using CodeGeass.KnightmareFrames.Infra.Data.Contexts;
 
 namespace CodeGeass.KnightmareFrames.Infra.Data.Base
 {
-    public sealed class Repository<TEntity> : Repository<TEntity, CodeGeassInvoiceBdContext>, IRepository<TEntity> where TEntity : AggregateRoot
+    public sealed class Repository<TEntity> : Repository<TEntity, CodeGeassKnightmareFrameBdContext>, IRepository<TEntity> where TEntity : AggregateRoot
     {
-        public Repository(CodeGeassInvoiceBdContext context) : base(context) { }
+        public Repository(CodeGeassKnightmareFrameBdContext context) : base(context) { }
 
     }
 }

@@ -46,7 +46,7 @@ namespace CodeGeass.KnightmareFrames.Api
             services.AddMVC();
             services.AddSwagger(configuration);
 
-            services.AddHealthChecksMiddleware<CodeGeassInvoiceBdContext>();
+            services.AddHealthChecksMiddleware<CodeGeassKnightmareFrameBdContext>();
             services.AddDependecies(configuration);
             services.ConfigRebus(configuration);
             services.ConfigQuartz(configuration);

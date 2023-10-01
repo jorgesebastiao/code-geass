@@ -32,17 +32,17 @@ namespace CodeGeass.KnightmareFrames.Api.Extensions
             {
                 if (dataSettings.UseInMemoryDatabase)
                 {
-                    var options = new DbContextOptionsBuilder<CodeGeassInvoiceBdContext>().UseInMemoryDatabase(dataSettings.ConnectionString).Options;
-                    return new CodeGeassInvoiceBdContext(options, context.GetService<IMediator>(), context.GetService<IKnightmareFrameIntegrationEventMapper>());
+                    var options = new DbContextOptionsBuilder<CodeGeassKnightmareFrameBdContext>().UseInMemoryDatabase(dataSettings.ConnectionString).Options;
+                    return new CodeGeassKnightmareFrameBdContext(options, context.GetService<IMediator>(), context.GetService<IKnightmareFrameIntegrationEventMapper>());
                 }
                 else
                 {
-                    var options = new DbContextOptionsBuilder<CodeGeassInvoiceBdContext>().UseOracle(dataSettings.ConnectionString).Options;
-                    return new CodeGeassInvoiceBdContext(options, context.GetService<IMediator>(), context.GetService<IKnightmareFrameIntegrationEventMapper>());
+                    var options = new DbContextOptionsBuilder<CodeGeassKnightmareFrameBdContext>().UseOracle(dataSettings.ConnectionString).Options;
+                    return new CodeGeassKnightmareFrameBdContext(options, context.GetService<IMediator>(), context.GetService<IKnightmareFrameIntegrationEventMapper>());
                 }
             });
 
-            services.AddDbContext<CodeGeassInvoiceBdContext>();
+            services.AddDbContext<CodeGeassKnightmareFrameBdContext>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddSingleton<IKnightmareFrameIntegrationEventMapper, KnightmareFrameIntegrationEventMapper>();
 

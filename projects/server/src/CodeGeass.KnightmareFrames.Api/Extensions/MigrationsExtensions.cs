@@ -20,13 +20,13 @@ namespace CodeGeass.KnightmareFrames.Api.Extensions
             if (dataSettings.UseInMemoryDatabase)
             {
                 using var scope = app.Services.CreateScope();
-                var locadoraDbContext = scope.ServiceProvider.GetRequiredService<CodeGeassInvoiceBdContext>();
+                var locadoraDbContext = scope.ServiceProvider.GetRequiredService<CodeGeassKnightmareFrameBdContext>();
                 locadoraDbContext.Database.EnsureCreated();
             }
             else
             {
                 using var scope = app.Services.CreateScope();
-                var locadoraDbContext = scope.ServiceProvider.GetRequiredService<CodeGeassInvoiceBdContext>();
+                var locadoraDbContext = scope.ServiceProvider.GetRequiredService<CodeGeassKnightmareFrameBdContext>();
                 locadoraDbContext.Database.Migrate();
             }
         }
