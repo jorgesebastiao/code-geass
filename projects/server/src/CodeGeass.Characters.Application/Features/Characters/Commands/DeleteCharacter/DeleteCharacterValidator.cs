@@ -6,7 +6,7 @@ namespace CodeGeass.Characters.Application.Features.Customers.Commands.DeleteCus
     {
         public DeleteCharacterValidator()
         {
-
+            RuleFor(x => x.CharacterId).NotEmpty().NotNull();
         }
     }
 }

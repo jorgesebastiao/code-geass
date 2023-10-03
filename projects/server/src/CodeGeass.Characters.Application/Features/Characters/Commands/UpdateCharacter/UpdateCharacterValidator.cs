@@ -6,7 +6,8 @@ namespace CodeGeass.Characters.Application.Features.Characters.Commands.UpdateCh
     {
         public UpdateCharacterValidator()
         {
-
+            RuleFor(x => x.Id).NotEmpty().NotNull();
+            RuleFor(x => x.Name).NotEmpty().NotNull();
         }
     }
 }

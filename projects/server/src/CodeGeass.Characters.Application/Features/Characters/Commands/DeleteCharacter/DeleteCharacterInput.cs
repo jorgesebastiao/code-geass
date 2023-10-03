@@ -4,6 +4,6 @@ namespace CodeGeass.Characters.Application.Features.Customers.Commands.DeleteCus
 {
     public class DeleteCharacterInput : BaseCommandInput
     {
-        public Guid CustomerId { get; set; }
+        public Guid CharacterId { get; set; }
     }
 }

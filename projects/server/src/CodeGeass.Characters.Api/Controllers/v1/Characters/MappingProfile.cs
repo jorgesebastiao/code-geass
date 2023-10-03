@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CodeGeass.Characters.Api.Controllers.v1.Characters.Requests;
+using CodeGeass.Characters.Application.Features.Characters.Commands.UpdateCharacter;
 using CodeGeass.Characters.Application.Features.Customers.Commands.CreateCustomer;
 
 namespace CodeGeass.Characters.Api.Controllers.v1.Characters
@@ -15,6 +16,7 @@ namespace CodeGeass.Characters.Api.Controllers.v1.Characters
         public MappingProfile()
         {
             CreateMap<CreateCharacterRequest, CreateCharacterInput>();
+            CreateMap<UpdateCharacterRequest, UpdateCharacterInput>();
         }
     }
 }

@@ -13,8 +13,8 @@ namespace CodeGeass.Characters.Application.Features.Customers.Commands.CreateCus
         public CreateCharacterUseCase(ICharacterFactory characterFactory, ICharacterRepository characterRepository, IMapper mapper) : base(mapper)
         {
             _characterFactory = characterFactory;
-            _mapper = mapper;
             _characterRepository = characterRepository;
+            _mapper = mapper;
         }
 
         public override async Task<Output> Handle(CreateCharacterInput input, CancellationToken cancellationToken)
