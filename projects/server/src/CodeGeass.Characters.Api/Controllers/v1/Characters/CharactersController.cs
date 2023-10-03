@@ -9,7 +9,6 @@ using CodeGeass.Characters.Application.Features.Characters.Queries.GetAllCustome
 using CodeGeass.Characters.Application.Features.Characters.Queries.GetByIdCharacter;
 using CodeGeass.Characters.Application.Features.Customers.Commands.CreateCustomer;
 using CodeGeass.Characters.Application.Features.Customers.Commands.DeleteCustomer;
-using CodeGeass.Characters.Domain.Features.Characters;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
