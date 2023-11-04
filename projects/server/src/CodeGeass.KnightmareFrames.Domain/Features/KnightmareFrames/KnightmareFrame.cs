@@ -4,12 +4,17 @@ namespace CodeGeass.KnightmareFrames.Domain.Features.KnightmareFrames
 {
     public class KnightmareFrame : AggregateRoot
     {
+        public string Name { get; private set; }
+        public string Code { get; private set; }
+        public string Generation { get; private set; }
+       
+        protected KnightmareFrame() { }
 
-        public Guid CustomerId { get; private set; }
-
-        public KnightmareFrame(Guid customerId)
+        public KnightmareFrame(string name, string code, string generation)
         {
-            CustomerId = customerId;
+            Name = name;
+            Code = code;
+            Generation = generation;
         }
     }
 }

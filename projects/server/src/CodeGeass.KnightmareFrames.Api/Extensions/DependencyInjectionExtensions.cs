@@ -57,6 +57,7 @@ namespace CodeGeass.KnightmareFrames.Api.Extensions
         private static void AddKnightmareFrames(this IServiceCollection services)
         {
             services.AddScoped<IKnightmareFrameRepository, KnightmareFrameRepository>();
+            services.AddScoped<IKnightmareFrameFactory, KnightmareFrameFactory>();
         }
     }
 }

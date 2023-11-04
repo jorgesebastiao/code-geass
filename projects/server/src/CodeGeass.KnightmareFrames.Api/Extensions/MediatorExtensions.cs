@@ -1,5 +1,6 @@
 ﻿using CodeGeass.Application;
 using CodeGeass.Application.Behaviors;
+using CodeGeass.KnightmareFrames.Application;
 using System.Reflection;
 
 namespace CodeGeass.KnightmareFrames.Api.Extensions
@@ -28,6 +29,7 @@ namespace CodeGeass.KnightmareFrames.Api.Extensions
         {
             yield return typeof(Program).GetTypeInfo().Assembly;
             yield return typeof(AppModule).GetTypeInfo().Assembly;
+            yield return typeof(KnightmareFramesAppModule).GetTypeInfo().Assembly;
         }
     }
 }

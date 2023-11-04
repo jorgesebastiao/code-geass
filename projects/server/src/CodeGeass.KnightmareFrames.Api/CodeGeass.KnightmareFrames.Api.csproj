@@ -35,7 +35,6 @@
 
   <ItemGroup>
     <Folder Include="Behaviours\" />
-    <Folder Include="Controllers\v1\" />
   </ItemGroup>
 
   <ItemGroup>
