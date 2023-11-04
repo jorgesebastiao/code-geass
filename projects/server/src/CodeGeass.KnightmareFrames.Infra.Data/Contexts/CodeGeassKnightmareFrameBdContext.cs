@@ -13,14 +13,14 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
     /// <summary>
     /// Classe que representa o contexto do banco de dados da aplicação
     /// </summary>
-    public class CodeGeassInvoiceBdContext : DbContextBase<CodeGeassInvoiceBdContext>
+    public class CodeGeassKnightmareFrameBdContext : DbContextBase<CodeGeassKnightmareFrameBdContext>
     {
 
         /// <summary>
         /// Contrutor padrão da classe de contexto
         /// </summary>
         /// <param name="options"></param>
-        public CodeGeassInvoiceBdContext(DbContextOptions<CodeGeassInvoiceBdContext> options, IMediator mediator, IIntegrationEventMapper eventMapper) : base(options, mediator, eventMapper)
+        public CodeGeassKnightmareFrameBdContext(DbContextOptions<CodeGeassKnightmareFrameBdContext> options, IMediator mediator, IIntegrationEventMapper eventMapper) : base(options, mediator, eventMapper)
         {
 
         }
@@ -29,7 +29,7 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
         /// Construtor padrão para ser utilizando caso venha ser implementado Migrations
         /// </summary>
         /// <param name="options"></param>
-        internal CodeGeassInvoiceBdContext(DbContextOptions options) : base(options)
+        internal CodeGeassKnightmareFrameBdContext(DbContextOptions options) : base(options)
         {
 
         }

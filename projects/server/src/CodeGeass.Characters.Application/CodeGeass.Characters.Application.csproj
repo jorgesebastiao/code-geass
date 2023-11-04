@@ -11,8 +11,4 @@
     <ProjectReference Include="..\CodeGeass.IntegrationsEvents\CodeGeass.IntegrationsEvents.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Characters\Queries\GetByIdCharacter\" />
-  </ItemGroup>
-
 </Project>
