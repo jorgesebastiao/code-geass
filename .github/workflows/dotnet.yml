@@ -16,13 +16,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
+    - name: Setup .NET CodeGeassSolution.sln
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+    - name: Restore dependencies CodeGeass.Api
+      run: dotnet restore projects/server/src/CodeGeass.Api/CodeGeass.Api.csproj
+    - name: Build CodeGeass.Api
+      run: dotnet build projects/server/src/CodeGeass.Api/CodeGeass.Api.csproj --no-restore 
+    - name: Test CodeGeass.Api
+      run: dotnet test projects/server/src/CodeGeass.Api/CodeGeass.Api.csproj --no-build --verbosity normal
+    - name: Restore dependencies CodeGeass.KnightmareFrames.Api
+      run: dotnet restore projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
+    - name: Build CodeGeass.KnightmareFrames.Api
+      run: dotnet build projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore 
+    - name: Test CodeGeass.KnightmareFrames.Api
+      run: dotnet test projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-build --verbosity normal 
