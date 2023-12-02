@@ -10,7 +10,7 @@ on:
     branches: [ "dev" ]
 
 jobs:
-  build:
+  build_and_tests:
 
     runs-on: ubuntu-latest
 
@@ -24,11 +24,9 @@ jobs:
       run: dotnet restore projects/server/src/CodeGeass.Api/CodeGeass.Api.csproj
     - name: Build CodeGeass.Api
       run: dotnet build projects/server/src/CodeGeass.Api/CodeGeass.Api.csproj --no-restore 
-    - name: Test CodeGeass.Api
-      run: dotnet test projects/server/src/CodeGeass.Api/CodeGeass.Api.csproj --no-build --verbosity normal
     - name: Restore dependencies CodeGeass.KnightmareFrames.Api
       run: dotnet restore projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
     - name: Build CodeGeass.KnightmareFrames.Api
       run: dotnet build projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore 
-    - name: Test CodeGeass.KnightmareFrames.Api
-      run: dotnet test projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-build --verbosity normal 
+    - name: Test CodeGeassSolution.sln
+      run: dotnet test projects/server/CodeGeassSolution,sln --no-build --verbosity normal 
