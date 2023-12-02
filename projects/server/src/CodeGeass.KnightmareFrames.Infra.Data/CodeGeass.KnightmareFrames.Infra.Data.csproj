@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.16" />
-    <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.90" />
   </ItemGroup>
   
   <ItemGroup>

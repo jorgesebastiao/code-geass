@@ -22,7 +22,7 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
 
             var appSettings = config.LoadSettings<DataSettings>("DataSettings");
 
-            optionsBuilder.UseOracle(appSettings.ConnectionString);
+            optionsBuilder.UseInMemoryDatabase(appSettings.ConnectionString);
 
             return new CodeGeassKnightmareFrameBdContext(optionsBuilder.Options);
         }

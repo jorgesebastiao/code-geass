@@ -44,7 +44,6 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("knightmareFrames");
-            modelBuilder.ApplyConfiguration(new OutboxIntegrationEventEntityConfiguration());
             modelBuilder.ApplyConfiguration(new KnightmareFrameEntityConfiguration());
             base.OnModelCreating(modelBuilder);
         }

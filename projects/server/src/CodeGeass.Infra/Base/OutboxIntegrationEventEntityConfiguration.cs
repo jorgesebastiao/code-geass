@@ -2,13 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CodeGeass.Characters.Infra.Data.Base
+namespace CodeGeass.Infra.Base
 {
     public class OutboxIntegrationEventEntityConfiguration : IEntityTypeConfiguration<OutboxIntegrationEvent>
     {
         public void Configure(EntityTypeBuilder<OutboxIntegrationEvent> builder)
         {
             builder.ToTable("OutboxIntegrationEvents");
+
         }
     }
 }

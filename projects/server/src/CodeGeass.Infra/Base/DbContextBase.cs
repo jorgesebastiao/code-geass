@@ -37,6 +37,7 @@ namespace CodeGeass.Infra.Base
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new OutboxIntegrationEventEntityConfiguration());
             modelBuilder.Ignore<AggregateRoot>();
             modelBuilder.Entity<AggregateRoot>().Ignore(e => e.DomainEvents);
             modelBuilder.Entity<AggregateRoot>().Property(q => q.Id).ValueGeneratedNever();

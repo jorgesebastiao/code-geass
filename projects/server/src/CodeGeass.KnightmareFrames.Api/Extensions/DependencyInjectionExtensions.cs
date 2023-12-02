@@ -37,7 +37,7 @@ namespace CodeGeass.KnightmareFrames.Api.Extensions
                 }
                 else
                 {
-                    var options = new DbContextOptionsBuilder<CodeGeassKnightmareFrameBdContext>().UseOracle(dataSettings.ConnectionString).Options;
+                    var options = new DbContextOptionsBuilder<CodeGeassKnightmareFrameBdContext>().UseInMemoryDatabase(dataSettings.ConnectionString).Options;
                     return new CodeGeassKnightmareFrameBdContext(options, context.GetService<IMediator>(), context.GetService<IKnightmareFrameIntegrationEventMapper>());
                 }
             });
