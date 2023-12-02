@@ -8,6 +8,7 @@ namespace CodeGeass.KnightmareFrames.Application.Features.KnightmareFrames.Comma
         public UpdateKnightmareFrameProfile()
         {
             CreateMap<UpdateKnightmareFrameInput, KnightmareFrame>()
+                .ForMember(dest => dest.Code, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
                 .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore());
         }
