@@ -34,4 +34,4 @@ jobs:
     - name: Build CodeGeass.KnightmareFrames.Api
       run: dotnet build ./src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
     - name: Test CodeGeassSolution
-      run: dotnet test -p:CollectCoverage=true -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover --verbosity normal  ./tests/CodeGeass*[Tt]ests/*.csproj --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet test -p:CollectCoverage=true -p:CoverletOutput=TestResults/ -p:CoverletOutputFormat=opencover  --no-build --verbosity normal  ./tests/CodeGeass*[Tt]ests/*.csproj --configuration ${{ env.BUILD_CONFIG }}
