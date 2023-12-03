@@ -30,5 +30,5 @@ jobs:
       run: dotnet restore projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
     - name: Build CodeGeass.KnightmareFrames.Api
       run: dotnet build projects/server/src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore --configuration $BUILD_CONFIG
-    - name: Test CodeGeassSolution.sln
-      run: dotnet test projects/server/CodeGeassSolution.sln --configuration $BUILD_CONFIG
+    - name: Test CodeGeassSolution
+      run: dotnet test  **/*CodeGeass*[Tt]ests/*.csproj --configuration $BUILD_CONFIG
