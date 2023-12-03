@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\KnightmareFrames\Commands\" />
     <Folder Include="Features\KnightmareFrames\EventHandlers\" />
-    <Folder Include="Features\KnightmareFrames\Queries\" />
   </ItemGroup>
 
 </Project>

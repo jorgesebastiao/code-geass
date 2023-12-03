@@ -6,7 +6,8 @@ namespace CodeGeass.Characters.Application.Features.Customers.Commands.CreateCus
     {
         public CreateCharacterValidator()
         {
-
+            RuleFor(x => x.Name).NotEmpty().NotNull();
+            RuleFor(x => x.NickName).NotEmpty().NotNull();
         }
     }
 }

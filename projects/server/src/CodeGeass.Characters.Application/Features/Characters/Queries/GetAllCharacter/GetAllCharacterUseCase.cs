@@ -1,25 +1,26 @@
 ﻿using AutoMapper;
 using CodeGeass.Application.Common;
+using CodeGeass.Characters.Application.Features.Characters.Queries.GetAllCustomer;
 using CodeGeass.Characters.Domain.Features.Characters;
 
-namespace CodeGeass.Characters.Application.Features.Characters.Queries.GetAllCustomer
+namespace CodeGeass.Characters.Application.Features.Characters.Queries.GetAllCharacter
 {
     public class GetAllCharacterUseCase : BaseUseCase<GetAllCharacterInput>
     {
-        private readonly ICharacterRepository _customerRepository;
+        private readonly ICharacterRepository _characterRepository;
 
-        public GetAllCharacterUseCase(ICharacterRepository customerRepository, IMapper mapper) : base(mapper)
+        public GetAllCharacterUseCase(ICharacterRepository characterRepository, IMapper mapper) : base(mapper)
         {
-            _customerRepository = customerRepository;
+            _characterRepository = characterRepository;
         }
 
         public override async Task<Output> Handle(GetAllCharacterInput input, CancellationToken cancellationToken)
         {
-            var getAllCustomerCallback = await _customerRepository.GetAllAsync();
-            if (getAllCustomerCallback.IsFailure)
-                return Failure(getAllCustomerCallback.Failure);
+            var getAllCharacterCallback = await _characterRepository.GetAllAsync();
+            if (getAllCharacterCallback.IsFailure)
+                return Failure(getAllCharacterCallback.Failure);
 
-            return SuccessQueryable<Character, GetAllCharacterOutPut>(getAllCustomerCallback.Success);
+            return SuccessQueryable<Character, GetAllCharacterOutPut>(getAllCharacterCallback.Success);
         }
     }
 }

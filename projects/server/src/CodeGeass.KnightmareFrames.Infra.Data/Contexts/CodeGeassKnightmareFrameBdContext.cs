@@ -2,7 +2,6 @@
 using CodeGeass.Core.Outbox.Services;
 using CodeGeass.Infra.Base;
 using CodeGeass.KnightmareFrames.Domain.Features.KnightmareFrames;
-using CodeGeass.KnightmareFrames.Infra.Data.Base;
 using CodeGeass.KnightmareFrames.Infra.Data.Features.KnightmareFrames;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +43,6 @@ namespace CodeGeass.KnightmareFrames.Infra.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("knightmareFrames");
-            modelBuilder.ApplyConfiguration(new OutboxIntegrationEventEntityConfiguration());
             modelBuilder.ApplyConfiguration(new KnightmareFrameEntityConfiguration());
             base.OnModelCreating(modelBuilder);
         }

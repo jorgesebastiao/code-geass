@@ -8,7 +8,7 @@ namespace CodeGeass.Characters.Application.Features.Characters.Queries.GetByIdCh
     {
         private readonly ICharacterRepository _characterRepository;
 
-        public GetByIdCharacterUseCase(ICharacterRepository characterRepository, IMapper mapper): base(mapper)
+        public GetByIdCharacterUseCase(ICharacterRepository characterRepository, IMapper mapper) : base(mapper)
         {
             _characterRepository = characterRepository;
         }

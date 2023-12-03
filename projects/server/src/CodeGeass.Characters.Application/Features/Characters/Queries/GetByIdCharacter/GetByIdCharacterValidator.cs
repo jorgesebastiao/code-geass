@@ -6,7 +6,7 @@ namespace CodeGeass.Characters.Application.Features.Characters.Queries.GetByIdCh
     {
         public GetByIdCharacterValidator()
         {
-              RuleFor( x => x.CharacterId).NotEmpty().NotNull();  
+            RuleFor(x => x.CharacterId).NotEmpty().NotNull();
         }
     }
 }

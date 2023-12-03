@@ -1,5 +1,4 @@
 ﻿using CodeGeass.Characters.Domain.Features.Characters;
-using CodeGeass.Characters.Infra.Data.Base;
 using CodeGeass.Characters.Infra.Data.Features.Characters;
 using CodeGeass.Core.DomainObjects;
 using CodeGeass.Core.Outbox.Services;
@@ -43,10 +42,9 @@ namespace CodeGeass.Characters.Infra.Data.Contexts
         /// <param name="modelBuilder">É o construtor de modelos do EF</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfiguration(new OutboxIntegrationEventEntityConfiguration());
-            modelBuilder.ApplyConfiguration(new CharacterEntityConfiguration());
             modelBuilder.HasDefaultSchema("characters");
+            modelBuilder.ApplyConfiguration(new CharacterEntityConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

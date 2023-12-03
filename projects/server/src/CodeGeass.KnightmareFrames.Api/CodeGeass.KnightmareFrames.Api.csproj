@@ -13,12 +13,12 @@
     <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="6.4.0" />
     <PackageReference Include="Asp.Versioning.OData" Version="6.4.0" />
     <PackageReference Include="Asp.Versioning.OData.ApiExplorer" Version="6.4.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.16" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.25" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.25">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="6.0.16" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="6.0.25" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.16" />
     <PackageReference Include="Quartz" Version="3.6.2" />
     <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="3.6.2" />
@@ -35,7 +35,6 @@
 
   <ItemGroup>
     <Folder Include="Behaviours\" />
-    <Folder Include="Controllers\v1\" />
   </ItemGroup>
 
   <ItemGroup>

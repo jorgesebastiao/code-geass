@@ -39,7 +39,7 @@ namespace CodeGeass.KnightmareFrames.Api
             services.AddApiVersion();
 
             services.AddMediator();
-
+            services.AddAutoMapper();
             services.AddCORS(configuration);
             services.AddHttpContextAccessor();
 

@@ -27,8 +27,6 @@ namespace CodeGeass.Characters.Application.Features.Customers.Commands.CreateCus
             if (addCharacterCallback.IsFailure)
                 return Failure(addCharacterCallback.Failure);
 
-            await _characterRepository.UnitOfWork.CommitAsync(cancellationToken);
-
             return Success();
         }
     }

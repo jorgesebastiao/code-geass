@@ -37,7 +37,7 @@ namespace CodeGeass.Characters.Api.Extensions
                 }
                 else
                 {
-                    var options = new DbContextOptionsBuilder<CodeGeassCharacterBdContext>().UseOracle(dataSettings.ConnectionString).Options;
+                    var options = new DbContextOptionsBuilder<CodeGeassCharacterBdContext>().UseInMemoryDatabase(dataSettings.ConnectionString).Options;
                     return new CodeGeassCharacterBdContext(options, context.GetService<IMediator>(), context.GetService<ICharacterIntegrationEventMapper>());
                 }
             });
