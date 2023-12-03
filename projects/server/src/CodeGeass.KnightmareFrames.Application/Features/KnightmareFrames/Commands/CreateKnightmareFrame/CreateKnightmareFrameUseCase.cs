@@ -10,7 +10,7 @@ namespace CodeGeass.KnightmareFrames.Application.Features.KnightmareFrames.Comma
         private readonly IKnightmareFrameRepository _knightmareFrameRepository;
         private readonly IMapper _mapper;
 
-        public CreateKnightmareFrameUseCase(IKnightmareFrameFactory knightmareFrameFactory, IKnightmareFrameRepository knightmareFrameRepository, IMapper mapper): base(mapper)
+        public CreateKnightmareFrameUseCase(IKnightmareFrameFactory knightmareFrameFactory, IKnightmareFrameRepository knightmareFrameRepository, IMapper mapper) : base(mapper)
         {
             _knightmareFrameFactory = knightmareFrameFactory;
             _knightmareFrameRepository = knightmareFrameRepository;

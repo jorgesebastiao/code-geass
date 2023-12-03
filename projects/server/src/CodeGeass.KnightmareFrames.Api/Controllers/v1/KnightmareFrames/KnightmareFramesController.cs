@@ -20,7 +20,7 @@ namespace CodeGeass.KnightmareFrames.Api.Controllers.v1.KnightmareFrames
     /// Controller responsavel pelo Aggreagate KnightmareFrames
     /// </summary>
     [AllowAnonymous]
-    public class KnightmareFramesController: ApiControllerBase
+    public class KnightmareFramesController : ApiControllerBase
     {
         private readonly IMediator _mediator;
 

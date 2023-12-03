@@ -8,7 +8,7 @@ namespace CodeGeass.KnightmareFrames.Api.Controllers.v1.KnightmareFrames
     /// <summary>
     /// Perfil de mapeamento do Aggreagate Armaduras 
     /// </summary>
-    public class MappingProfile: Profile
+    public class MappingProfile : Profile
     {
         public MappingProfile()
         {

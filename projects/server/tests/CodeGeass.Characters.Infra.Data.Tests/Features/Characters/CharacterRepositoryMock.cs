@@ -3,7 +3,7 @@ using FizzWare.NBuilder;
 
 namespace CodeGeass.Characters.Infra.Data.Tests.Features.Characters
 {
-    public static  class CharacterRepositoryMock
+    public static class CharacterRepositoryMock
     {
         public static IEnumerable<Character> GetCharacters(int size)
         {

@@ -1,8 +1,8 @@
-﻿using CodeGeass.KnightmareFrames.Domain.Features.KnightmareFrames;
+﻿using CodeGeass.Core.Data;
+using CodeGeass.KnightmareFrames.Domain.Features.KnightmareFrames;
 using CodeGeass.KnightmareFrames.Infra.Data.Base;
 using CodeGeass.KnightmareFrames.Infra.Data.Contexts;
 using CodeGeass.KnightmareFrames.Infra.Data.Tests.Base;
-using CodeGeass.Core.Data;
 using CodeGeass.SharedKernel.Result;
 using Gwtdo;
 

@@ -4,7 +4,7 @@ namespace CodeGeass.KnightmareFrames.Application.Features.KnightmareFrames.Queri
 {
     public class GetByIdKnightmareFrameInput : BaseQueryInput
     {
-        public Guid KnightmareFrameId {get;set;}
+        public Guid KnightmareFrameId { get; set; }
 
     }
 }

@@ -18,8 +18,8 @@ namespace CodeGeass.Characters.Application.Features.Customers.Commands.DeleteCus
             var findCharacterCallback = await _characterRepository.GetByIdAsync(input.CharacterId, cancellationToken);
             if (findCharacterCallback.IsFailure) return Failure(findCharacterCallback.Failure);
 
-            var deleteCharacterCallback =  await _characterRepository.DeleteAsync(findCharacterCallback.Success, cancellationToken);
-            if(deleteCharacterCallback.IsFailure)  return Failure(deleteCharacterCallback.Failure);
+            var deleteCharacterCallback = await _characterRepository.DeleteAsync(findCharacterCallback.Success, cancellationToken);
+            if (deleteCharacterCallback.IsFailure) return Failure(deleteCharacterCallback.Failure);
 
             return Success();
         }

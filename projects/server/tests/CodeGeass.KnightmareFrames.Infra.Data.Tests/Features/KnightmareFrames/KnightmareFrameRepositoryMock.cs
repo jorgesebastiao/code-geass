@@ -3,7 +3,7 @@ using FizzWare.NBuilder;
 
 namespace CodeGeass.KnightmareFrames.Infra.Data.Tests.Features.KnightmareFrames
 {
-    public static  class KnightmareFrameRepositoryMock
+    public static class KnightmareFrameRepositoryMock
     {
         public static IEnumerable<KnightmareFrame> GetKnightmareFrames(int size)
         {

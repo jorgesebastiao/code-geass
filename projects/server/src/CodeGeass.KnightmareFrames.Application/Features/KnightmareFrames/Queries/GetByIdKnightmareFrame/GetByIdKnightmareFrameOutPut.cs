@@ -2,7 +2,7 @@
 
 namespace CodeGeass.KnightmareFrames.Application.Features.KnightmareFrames.Queries.GetByIdKnightmareFrame
 {
-    public class GetByIdKnightmareFrameOutPut: IOutput
+    public class GetByIdKnightmareFrameOutPut : IOutput
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

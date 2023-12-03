@@ -23,7 +23,7 @@ namespace CodeGeass.Characters.Application.Features.Characters.Commands.UpdateCh
             _mapper.Map(input, findCharacterCallback.Success);
 
             var updateCharacterCallback = await _characterRepository.UpdateAsync(findCharacterCallback.Success, cancellationToken);
-            if(updateCharacterCallback.IsFailure)  return Failure(updateCharacterCallback.Failure);
+            if (updateCharacterCallback.IsFailure) return Failure(updateCharacterCallback.Failure);
 
             return Success();
         }

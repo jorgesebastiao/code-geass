@@ -7,7 +7,7 @@ namespace CodeGeass.KnightmareFrames.Domain.Features.KnightmareFrames
         public string Name { get; private set; }
         public string Code { get; private set; }
         public string Generation { get; private set; }
-       
+
         protected KnightmareFrame() { }
 
         public KnightmareFrame(string name, string code, string generation)

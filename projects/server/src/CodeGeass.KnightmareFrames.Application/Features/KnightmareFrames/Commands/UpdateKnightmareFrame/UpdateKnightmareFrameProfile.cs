@@ -3,7 +3,7 @@ using CodeGeass.KnightmareFrames.Domain.Features.KnightmareFrames;
 
 namespace CodeGeass.KnightmareFrames.Application.Features.KnightmareFrames.Commands.UpdateKnightmareFrame
 {
-    public class UpdateKnightmareFrameProfile: Profile
+    public class UpdateKnightmareFrameProfile : Profile
     {
         public UpdateKnightmareFrameProfile()
         {

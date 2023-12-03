@@ -8,7 +8,7 @@ namespace CodeGeass.KnightmareFrames.Application.Features.KnightmareFrames.Queri
     {
         private readonly IKnightmareFrameRepository _knightmareFrameRepository;
 
-        public GetAllKnightmareFrameUseCase(IKnightmareFrameRepository knightmareFrameRepository, IMapper mapper): base(mapper)
+        public GetAllKnightmareFrameUseCase(IKnightmareFrameRepository knightmareFrameRepository, IMapper mapper) : base(mapper)
         {
             _knightmareFrameRepository = knightmareFrameRepository;
         }

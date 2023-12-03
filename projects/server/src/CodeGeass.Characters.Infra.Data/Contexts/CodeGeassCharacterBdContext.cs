@@ -1,5 +1,4 @@
 ﻿using CodeGeass.Characters.Domain.Features.Characters;
-using CodeGeass.Characters.Infra.Data.Base;
 using CodeGeass.Characters.Infra.Data.Features.Characters;
 using CodeGeass.Core.DomainObjects;
 using CodeGeass.Core.Outbox.Services;

@@ -2,10 +2,10 @@
 
 namespace CodeGeass.Characters.Application.Features.Characters.Queries.GetByIdCharacter
 {
-    public class GetByIdCharacterOutPut: IOutput
+    public class GetByIdCharacterOutPut : IOutput
     {
-        public Guid Id { get;  set; }
-        public string Name { get;  set; }
-        public string NickName { get;  set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string NickName { get; set; }
     }
 }
