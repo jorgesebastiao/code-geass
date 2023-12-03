@@ -28,10 +28,10 @@ jobs:
     - name: Restore dependencies CodeGeass.Api
       run: dotnet restore ./CodeGeass.Api/CodeGeass.Api.csproj
     - name: Build CodeGeass.Api
-      run: dotnet build **/CodeGeass.Api/CodeGeass.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet build ./CodeGeass.Api/CodeGeass.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
     - name: Restore dependencies CodeGeass.KnightmareFrames.Api
-      run: dotnet restore **/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
+      run: dotnet restore ./CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
     - name: Build CodeGeass.KnightmareFrames.Api
-      run: dotnet build **/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet build ./CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
     - name: Test CodeGeassSolution
-      run: dotnet test  **/*CodeGeass*[Tt]ests/*.csproj --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet test  ./*CodeGeass*[Tt]ests/*.csproj --configuration ${{ env.BUILD_CONFIG }}
