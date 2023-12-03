@@ -26,7 +26,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies CodeGeass.Api
-      run: dotnet restore **/CodeGeass.Api/CodeGeass.Api.csproj
+      run: dotnet restore ./CodeGeass.Api/CodeGeass.Api.csproj
     - name: Build CodeGeass.Api
       run: dotnet build **/CodeGeass.Api/CodeGeass.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
     - name: Restore dependencies CodeGeass.KnightmareFrames.Api
