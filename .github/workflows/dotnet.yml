@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
         run:
-          working-directory: ./projects/server/src
+          working-directory: ./projects/server
 
     steps:
     - uses: actions/checkout@v3
@@ -26,12 +26,12 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies CodeGeass.Api
-      run: dotnet restore ./CodeGeass.Api/CodeGeass.Api.csproj
+      run: dotnet restore ./src/CodeGeass.Api/CodeGeass.Api.csproj
     - name: Build CodeGeass.Api
-      run: dotnet build ./CodeGeass.Api/CodeGeass.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet build ./src/CodeGeass.Api/CodeGeass.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
     - name: Restore dependencies CodeGeass.KnightmareFrames.Api
-      run: dotnet restore ./CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
+      run: dotnet restore ./src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj
     - name: Build CodeGeass.KnightmareFrames.Api
-      run: dotnet build ./CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet build ./src/CodeGeass.KnightmareFrames.Api/CodeGeass.KnightmareFrames.Api.csproj --no-restore --configuration ${{ env.BUILD_CONFIG }}
     - name: Test CodeGeassSolution
-      run: dotnet test  ./*CodeGeass*[Tt]ests/*.csproj --configuration ${{ env.BUILD_CONFIG }}
+      run: dotnet test  ./tests/*CodeGeass*[Tt]ests/*.csproj --configuration ${{ env.BUILD_CONFIG }}
