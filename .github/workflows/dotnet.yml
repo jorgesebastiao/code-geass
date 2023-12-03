@@ -24,7 +24,7 @@ jobs:
     - name: Setup .NET CodeGeassSolution.sln
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
     - name: Restore dependencies CodeGeass.Api
       run: dotnet restore ./src/CodeGeass.Api/CodeGeass.Api.csproj
     - name: Build CodeGeass.Api

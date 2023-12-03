@@ -1,13 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\CodeGeass.Core\CodeGeass.Core.csproj" />
     <ProjectReference Include="..\CodeGeass.SharedKernel.Result\CodeGeass.SharedKernel.Result.csproj" />
   </ItemGroup>
-
 </Project>
