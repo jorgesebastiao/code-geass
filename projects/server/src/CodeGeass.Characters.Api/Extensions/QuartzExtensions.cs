@@ -18,8 +18,7 @@ namespace CodeGeass.Characters.Api.Extensions
         {
             services.AddQuartz(options =>
             {
-                options.SchedulerId = "CodeGeass-customers-api";
-                options.UseMicrosoftDependencyInjectionJobFactory();
+                options.SchedulerId = "CodeGeass-characters-api";
 
                 options.UseSimpleTypeLoader();
                 options.UseInMemoryStore();

@@ -18,8 +18,7 @@ namespace CodeGeass.KnightmareFrames.Api.Extensions
         {
             services.AddQuartz(options =>
             {
-                options.SchedulerId = "CodeGeass-invoices-api";
-                options.UseMicrosoftDependencyInjectionJobFactory();
+                options.SchedulerId = "CodeGeass-knightmareFrames-api";
 
                 options.UseSimpleTypeLoader();
                 options.UseInMemoryStore();
