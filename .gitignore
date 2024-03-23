@@ -313,5 +313,12 @@ __pycache__/
 
 **/temp/
 
+
 # ignore volume Raabbitmq
-configs/rabbitmq/data
+docker/rabbitmq/data
+# ignore volume Redis
+/docker/redis/data
+# ignore volume MongoDB
+docker/mongo/
+# ignore volume Prometheus
+/docker/prometheus/data
